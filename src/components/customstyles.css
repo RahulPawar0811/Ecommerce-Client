@@ -1,0 +1,237 @@
+/* Custom DatePicker styles */
+.custom-date-picker {
+    font-size: 12px;  /* Smaller font size for a more compact appearance */
+    padding: 8px 12px;  /* Slightly adjusted padding for a more refined look */
+    width: 120px;  /* Decrease width for a smaller input box */
+    height: 32px;  /* Fixed height to control box size */
+    border: 1px solid #ccc;  /* Subtle border */
+    border-radius: 4px;  /* Rounded corners for a smoother look */
+    background-color: #f9f9f9;  /* Light background for the input */
+    color: #333;  /* Dark text color for readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for focus */
+  }
+  
+  .custom-date-picker:focus {
+    outline: none;  /* Remove the default outline */
+    border-color: #007bff;  /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);  /* Add a glow effect on focus */
+  }
+  
+  /* Date picker wrapper */
+  .date-picker-wrapper {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  
+  /* Calendar icon styles */
+  .custom-date-picker-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;  /* Slightly increased right margin for better icon placement */
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #aaa;  /* Subtle color for the icon */
+  }
+  
+  /* Optional: Add hover effect for a more interactive feel */
+  .custom-date-picker:hover {
+    border-color: #007bff;  /* Slightly change border color when hovered */
+  }
+  
+/* Style the dropdown container */
+.year-dropdown {
+  position: absolute;  /* Use absolute positioning */
+  top: 15px;           /* Adjust vertical position */
+  right: 20px;         /* Align the dropdown to the right side */
+  display: inline-block;
+  z-index: 10;         /* Ensure it's on top of other elements */
+}
+
+/* Style the dropdown select element */
+.custom-dropdown {
+  width: 100px;  /* Reduced width of the dropdown */
+  padding: 8px 25px 8px 10px;  /* Padding adjusted for icon space */
+  font-size: 14px;  /* Adjust font size */
+  border-radius: 8px;  /* Rounded corners */
+  border: 1px solid #ccc;  /* Light border */
+  background-color: #f8f8f8;  /* Subtle light background */
+  appearance: none;  /* Remove default dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for focus */
+}
+
+/* Add focus styling to the dropdown */
+.custom-dropdown:focus {
+  border-color: #36A2EB;  /* Blue border when focused */
+  outline: none;
+  background-color: #e6f7ff; /* Light blue background on focus */
+}
+
+/* Hover effect for the dropdown */
+.custom-dropdown:hover {
+  background-color: #f1f1f1;  /* Slightly darker on hover */
+}
+
+/* Style for the calendar icon */
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;  /* Slightly smaller icon size */
+  color: #888;
+  pointer-events: none;  /* Disable interaction with the icon */
+  transition: color 0.3s;  /* Smooth transition on hover */
+}
+
+/* Change icon color on hover of the dropdown */
+.custom-dropdown:hover + .dropdown-icon {
+  color: #36A2EB;  /* Change icon color on hover */
+}
+
+/* Optional: Add a subtle animation when dropdown opens */
+.custom-dropdown {
+  transition: all 0.3s ease-in-out; /* Smooth opening animation */
+}
+
+/* Style the chart container to control the height and width */
+.custom-bar-chart {
+  height: 200px !important;  /* Ensure the height is set to 200px */
+  width: auto !important;    /* Ensure the width is set to 296px */
+}
+
+/* For expired follow-ups - red */
+.expired-toast {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.expired-toast strong {
+  color: #d9534f;
+}
+
+/* For upcoming follow-ups - yellow */
+.upcoming-toast {
+  background-color: #fff3cd;
+  color: #fbbc05 ;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.upcoming-toast strong {
+  color: #fbbc05 ;
+}
+/* Modal Overlay */
+.modal-overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content1 {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 85%;
+  text-align: left;
+  transform: translateY(-50px);
+  animation: fadeInUp 0.3s ease-out;
+  margin-top: 160px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Title */
+.modal-content1 h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Modal Body Text */
+.modal-content1 p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Modal List */
+.modal-content1 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content1 ul li {
+  font-size: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.modal-content1 ul li span {
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+/* Status Color */
+.text-danger {
+  color: #e74c3c;
+}
+
+.text-warning {
+  color: #f39c12;
+}
+
+/* Button */
+.btn1 {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
